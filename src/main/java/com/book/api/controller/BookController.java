@@ -28,6 +28,10 @@ public class BookController {
 private BookService bookService;
 
 
+@GetMapping("/home")
+	public String test(){
+	return "this is home page";
+	}
 //Featch Book By ID
 @GetMapping("/books/{id}")
 public ResponseEntity<Book> getBookById(@PathVariable("id") int id){
